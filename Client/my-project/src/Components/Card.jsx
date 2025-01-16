@@ -9,7 +9,7 @@ const Card = (props) => {
           <p className="font-bold">Title: {val.entryTags.TITLE}</p>
           <p>Author: {val.entryTags.AUTHOR}</p>
           <p>year:{val.entryTags.YEAR}</p>
-          <a href={val.entryTags.URL} target="_blank" classname="text-[1.65vmin]">
+          <a href={val.entryTags.URL} target="_blank" className="text-[1.85vmin]">
             Link:{val.entryTags.URL}
           </a>
         </div>
