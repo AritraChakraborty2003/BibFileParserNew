@@ -27,10 +27,13 @@ const SearchDBLP = () => {
         )
         .then((response) => {
           if (response.data.result.hits.hit != null) {
-            setData(response.data.result.hits.hit);
+            setData11(response.data.result.hits.hit);
+          } else {
+            setData11([]);
           }
         })
         .catch((error) => console.error(error));
+      setData(data11);
     } else if (terms.length == 2) {
       const data1 = terms[0];
       const data2 = terms[1];
@@ -42,6 +45,8 @@ const SearchDBLP = () => {
         .then((response) => {
           if (response.data.result.hits.hit != null) {
             setData11(response.data.result.hits.hit);
+          } else {
+            setData11([]);
           }
         });
       axios
@@ -51,6 +56,8 @@ const SearchDBLP = () => {
         .then((response) => {
           if (response.data.result.hits.hit != null) {
             setData21(response.data.result.hits.hit);
+          } else {
+            setData21([]);
           }
         });
 
@@ -66,6 +73,8 @@ const SearchDBLP = () => {
         .then((response) => {
           if (response.data.result.hits.hit != null) {
             setData11(response.data.result.hits.hit);
+          } else {
+            setData11([]);
           }
         });
       axios
@@ -75,6 +84,8 @@ const SearchDBLP = () => {
         .then((response) => {
           if (response.data.result.hits.hit != null) {
             setData21(response.data.result.hits.hit);
+          } else {
+            setData21([]);
           }
         });
       axios
@@ -84,6 +95,8 @@ const SearchDBLP = () => {
         .then((response) => {
           if (response.data.result.hits.hit != null) {
             setData31(response.data.result.hits.hit);
+          } else {
+            setData31([]);
           }
         });
 
@@ -100,6 +113,8 @@ const SearchDBLP = () => {
         .then((response) => {
           if (response.data.result.hits.hit != null) {
             setData11(response.data.result.hits.hit);
+          } else {
+            setData11([]);
           }
         });
       axios
@@ -109,6 +124,8 @@ const SearchDBLP = () => {
         .then((response) => {
           if (response.data.result.hits.hit != null) {
             setData21(response.data.result.hits.hit);
+          } else {
+            setData21([]);
           }
         });
       axios
@@ -116,6 +133,8 @@ const SearchDBLP = () => {
         .then((response) => {
           if (response.data.result.hits.hit != null) {
             setData31(response.data.result.hits.hit);
+          } else {
+            setData31([]);
           }
         });
       axios
@@ -125,12 +144,14 @@ const SearchDBLP = () => {
         .then((response) => {
           if (response.data.result.hits.hit != null) {
             setData41(response.data.result.hits.hit);
+          } else {
+            setData41([]);
           }
         });
 
       setData(data11.concat(data21).concat(data31).concat(data41));
     }
-  }, [terms, data]);
+  }, [terms, data11, data21, data31, data41]);
 
   return (
     <>
