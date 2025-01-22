@@ -21,8 +21,9 @@ const Card = (props) => {
           </div>
         ))}
       {props.category === "dblp" &&
+        props.data.length > 0 &&
         props.data
-          .filter((val) => val.hasOwnProperty("info"))
+          .filter((val) => val.hasOwnProperty("info") === true)
           .map((val) => (
             <div className="holder w-[100%] lg:w-[70%] border-[1px] p-[2vmin] lg:p-[4vmin]">
               <p className="font-bold">Title: {val.info.title || "not"}</p>

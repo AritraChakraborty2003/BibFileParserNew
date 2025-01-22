@@ -26,7 +26,9 @@ const SearchDBLP = () => {
           `https://dblp.org/search/publ/api?q=${data1}` + "&format=json&h=100"
         )
         .then((response) => {
-          setData(response.data.result.hits.hit);
+          if (response.data.result.hits.hit != null) {
+            setData(response.data.result.hits.hit);
+          }
         })
         .catch((error) => console.error(error));
     } else if (terms.length == 2) {
@@ -38,14 +40,18 @@ const SearchDBLP = () => {
           `https://dblp.org/search/publ/api?q=${data1}` + "&format=json&h=100"
         )
         .then((response) => {
-          setData11(response.data.result.hits.hit);
+          if (response.data.result.hits.hit != null) {
+            setData11(response.data.result.hits.hit);
+          }
         });
       axios
         .get(
           `https://dblp.org/search/publ/api?q=${data2}` + "&format=json&h=100"
         )
         .then((response) => {
-          setData21(response.data.result.hits.hit);
+          if (response.data.result.hits.hit != null) {
+            setData21(response.data.result.hits.hit);
+          }
         });
 
       setData(data11.concat(data21));
@@ -58,21 +64,27 @@ const SearchDBLP = () => {
           `https://dblp.org/search/publ/api?q=${data1}` + "&format=json&h=100"
         )
         .then((response) => {
-          setData11(response.data.result.hits.hit);
+          if (response.data.result.hits.hit != null) {
+            setData11(response.data.result.hits.hit);
+          }
         });
       axios
         .get(
           `https://dblp.org/search/publ/api?q=${data2}` + "&format=json&h=100"
         )
         .then((response) => {
-          setData21(response.data.result.hits.hit);
+          if (response.data.result.hits.hit != null) {
+            setData21(response.data.result.hits.hit);
+          }
         });
       axios
         .get(
           `https://dblp.org/search/publ/api?q=${data3}` + "&format=json&h=100"
         )
         .then((response) => {
-          setData31(response.data.result.hits.hit);
+          if (response.data.result.hits.hit != null) {
+            setData31(response.data.result.hits.hit);
+          }
         });
 
       setData(data11.concat(data21).concat(data31));
@@ -86,26 +98,34 @@ const SearchDBLP = () => {
           `https://dblp.org/search/publ/api?q=${data1}` + "&format=json&h=100"
         )
         .then((response) => {
-          setData11(response.data.result.hits.hit);
+          if (response.data.result.hits.hit != null) {
+            setData11(response.data.result.hits.hit);
+          }
         });
       axios
         .get(
           `https://dblp.org/search/publ/api?q=${data2}` + "&format=json&h=100"
         )
         .then((response) => {
-          setData21(response.data.result.hits.hit);
+          if (response.data.result.hits.hit != null) {
+            setData21(response.data.result.hits.hit);
+          }
         });
       axios
         .get(`https://dblp.org/search/publ/api?q=${data3}` + "&format=json")
         .then((response) => {
-          setData31(response.data.result.hits.hit);
+          if (response.data.result.hits.hit != null) {
+            setData31(response.data.result.hits.hit);
+          }
         });
       axios
         .get(
           `https://dblp.org/search/publ/api?q=${data4}` + "&format=json&h=100"
         )
         .then((response) => {
-          setData41(response.data.result.hits.hit);
+          if (response.data.result.hits.hit != null) {
+            setData41(response.data.result.hits.hit);
+          }
         });
 
       setData(data11.concat(data21).concat(data31).concat(data41));
