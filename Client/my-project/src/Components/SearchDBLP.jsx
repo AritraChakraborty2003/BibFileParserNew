@@ -154,6 +154,9 @@ const SearchDBLP = () => {
           <div>
             {(data.length > 0 && (
               <>
+                <p className="text-center text-[3vmin] mt-24">
+                  Search Results:{data.length > 0 ? data.length : 0}
+                </p>
                 <div className="flex flex-col justify-center items-center w-[100%]  gap-y-6 p-6">
                   <Card data={data} category="dblp" />
                 </div>
