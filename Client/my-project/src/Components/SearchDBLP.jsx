@@ -92,7 +92,7 @@ const SearchDBLP = () => {
 
       setData(data11.concat(data21).concat(data31).concat(data41));
     }
-  }, [terms, data, data11, data21, data31, data41]);
+  }, [terms, data]);
 
   return (
     <>
