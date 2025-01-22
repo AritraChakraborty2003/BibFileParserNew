@@ -66,14 +66,11 @@ const SearchPage = () => {
       {(id === `${import.meta.env.VITE_APP_KEY}` && (
         <>
           <div>
-            <h1 className="text-center  mt-10 font-bold text-[5vmin]">
-              Welcome to the search page
-            </h1>
             <p className="text-center">
               <input
                 id="input"
                 className="p-3 w-[50%] border-[1px] mt-8"
-                placeholder="Enter terms to find by commas"
+                placeholder="Enter terms to find by commas in ACL..."
               ></input>
               <button
                 className="align-center ml-4 p-3 bg-black text-white"
@@ -90,7 +87,7 @@ const SearchPage = () => {
                   Search Results: {data.length}
                 </p>
                 <div className="flex flex-col justify-center items-center w-[100%] mt-10 gap-y-6 p-6">
-                  <Card data={data} />
+                  <Card data={data} category="acl" />
                 </div>
               </>
             )) || (
