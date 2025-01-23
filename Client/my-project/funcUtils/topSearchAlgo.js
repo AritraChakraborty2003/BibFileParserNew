@@ -1,4 +1,6 @@
 const topIndex = {
+  "machine translation": 90,
+  machinetranslation: 96,
   codemix: 123,
   codemixing: 12,
   "code mixed": 87,

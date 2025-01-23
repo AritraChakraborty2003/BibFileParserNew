@@ -22,10 +22,15 @@ const SearchDBLP = () => {
   useEffect(() => {
     if (terms.length == 1) {
       const data1 = terms[0];
+
       axios
         .get(
           `https://dblp.org/search/publ/api?q=${data1.toLowerCase()}` +
-            `&format=json&h=${topIndex[data1.toLowerCase()]}`
+            `&format=json&h=${
+              topIndex[data1.toLowerCase()] != null
+                ? topIndex[data1.toLowerCase()]
+                : 100
+            }`
         )
         .then((response) => {
           if (response.data.result.hits.hit != null) {
@@ -43,7 +48,11 @@ const SearchDBLP = () => {
       axios
         .get(
           `https://dblp.org/search/publ/api?q=${data1.toLowerCase()}` +
-            `&format=json&h=${topIndex[data1.toLowerCase()]}`
+            `&format=json&h=${
+              topIndex[data1.toLowerCase()] != null
+                ? topIndex[data1.toLowerCase()]
+                : 100
+            }`
         )
         .then((response) => {
           if (response.data.result.hits.hit != null) {
@@ -55,7 +64,11 @@ const SearchDBLP = () => {
       axios
         .get(
           `https://dblp.org/search/publ/api?q=${data2.toLowerCase()}` +
-            `&format=json&h=${topIndex[data2.toLowerCase()]}`
+            `&format=json&h=${
+              topIndex[data2.toLowerCase()] != null
+                ? topIndex[data2.toLowerCase()]
+                : 100
+            }`
         )
         .then((response) => {
           if (response.data.result.hits.hit != null) {
@@ -73,7 +86,11 @@ const SearchDBLP = () => {
       axios
         .get(
           `https://dblp.org/search/publ/api?q=${data1.toLowerCase()}` +
-            `&format=json&h=${topIndex[data1.toLowerCase()]}`
+            `&format=json&h=${
+              topIndex[data1.toLowerCase()] != null
+                ? topIndex[data1.toLowerCase()]
+                : 100
+            }`
         )
         .then((response) => {
           if (response.data.result.hits.hit != null) {
@@ -85,7 +102,11 @@ const SearchDBLP = () => {
       axios
         .get(
           `https://dblp.org/search/publ/api?q=${data2.toLowerCase()}` +
-            `&format=json&h=${topIndex[data2.toLowerCase()]}`
+            `&format=json&h=${
+              topIndex[data2.toLowerCase()] != null
+                ? topIndex[data2.toLowerCase()]
+                : 100
+            }`
         )
         .then((response) => {
           if (response.data.result.hits.hit != null) {
@@ -97,7 +118,11 @@ const SearchDBLP = () => {
       axios
         .get(
           `https://dblp.org/search/publ/api?q=${data3.toLowerCase()}` +
-            `&format=json&h=${topIndex[data3.toLowerCase()]}`
+            `&format=json&h=${
+              topIndex[data3.toLowerCase()] != null
+                ? topIndex[data3.toLowerCase()]
+                : 100
+            }`
         )
         .then((response) => {
           if (response.data.result.hits.hit != null) {
@@ -116,7 +141,11 @@ const SearchDBLP = () => {
       axios
         .get(
           `https://dblp.org/search/publ/api?q=${data1.toLowerCase()}` +
-            `&format=json&h=${topIndex[data1.toLowerCase()]}`
+            `&format=json&h=${
+              topIndex[data1.toLowerCase()] != null
+                ? topIndex[data1.toLowerCase()]
+                : 100
+            }`
         )
         .then((response) => {
           if (response.data.result.hits.hit != null) {
@@ -128,7 +157,11 @@ const SearchDBLP = () => {
       axios
         .get(
           `https://dblp.org/search/publ/api?q=${data2.toLowerCase()}` +
-            `&format=json&h=${topIndex[data2.toLowerCase()]}`
+            `&format=json&h=${
+              topIndex[data2.toLowerCase()] != null
+                ? topIndex[data2.toLowerCase()]
+                : 100
+            }`
         )
         .then((response) => {
           if (response.data.result.hits.hit != null) {
@@ -140,7 +173,11 @@ const SearchDBLP = () => {
       axios
         .get(
           `https://dblp.org/search/publ/api?q=${data3.toLowerCase()}` +
-            `&format=json&h=${topIndex[data3.toLowerCase()]}`
+            `&format=json&h=${
+              topIndex[data3.toLowerCase()] != null
+                ? topIndex[data3.toLowerCase()]
+                : 100
+            }`
         )
         .then((response) => {
           if (response.data.result.hits.hit != null) {
@@ -152,7 +189,11 @@ const SearchDBLP = () => {
       axios
         .get(
           `https://dblp.org/search/publ/api?q=${data4.toLowerCase()}` +
-            `&format=json&h=${topIndex[data4.toLowerCase()]}`
+            `&format=json&h=${
+              topIndex[data4.toLowerCase()] != null
+                ? topIndex[data4.toLowerCase()]
+                : 100
+            }`
         )
         .then((response) => {
           if (response.data.result.hits.hit != null) {
