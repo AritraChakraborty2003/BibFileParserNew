@@ -3,6 +3,7 @@ import axios from "axios";
 import Card from "./Card";
 
 import { useEffect, useState } from "react";
+import topIndex from "../../funcUtils/topSearchAlgo.js";
 const SearchDBLP = () => {
   const { id } = useParams();
   const [data, setData] = useState([]);
@@ -23,7 +24,8 @@ const SearchDBLP = () => {
       const data1 = terms[0];
       axios
         .get(
-          `https://dblp.org/search/publ/api?q=${data1}` + "&format=json&h=100"
+          `https://dblp.org/search/publ/api?q=${data1.toLowerCase()}` +
+            `&format=json&h=${topIndex[data1.toLowerCase()]}`
         )
         .then((response) => {
           if (response.data.result.hits.hit != null) {
@@ -40,7 +42,8 @@ const SearchDBLP = () => {
 
       axios
         .get(
-          `https://dblp.org/search/publ/api?q=${data1}` + "&format=json&h=100"
+          `https://dblp.org/search/publ/api?q=${data1.toLowerCase()}` +
+            `&format=json&h=${topIndex[data1.toLowerCase()]}`
         )
         .then((response) => {
           if (response.data.result.hits.hit != null) {
@@ -51,7 +54,8 @@ const SearchDBLP = () => {
         });
       axios
         .get(
-          `https://dblp.org/search/publ/api?q=${data2}` + "&format=json&h=100"
+          `https://dblp.org/search/publ/api?q=${data2.toLowerCase()}` +
+            `&format=json&h=${topIndex[data2.toLowerCase()]}`
         )
         .then((response) => {
           if (response.data.result.hits.hit != null) {
@@ -68,7 +72,8 @@ const SearchDBLP = () => {
       const data3 = terms[2];
       axios
         .get(
-          `https://dblp.org/search/publ/api?q=${data1}` + "&format=json&h=100"
+          `https://dblp.org/search/publ/api?q=${data1.toLowerCase()}` +
+            `&format=json&h=${topIndex[data1.toLowerCase()]}`
         )
         .then((response) => {
           if (response.data.result.hits.hit != null) {
@@ -79,7 +84,8 @@ const SearchDBLP = () => {
         });
       axios
         .get(
-          `https://dblp.org/search/publ/api?q=${data2}` + "&format=json&h=100"
+          `https://dblp.org/search/publ/api?q=${data2.toLowerCase()}` +
+            `&format=json&h=${topIndex[data2.toLowerCase()]}`
         )
         .then((response) => {
           if (response.data.result.hits.hit != null) {
@@ -90,7 +96,8 @@ const SearchDBLP = () => {
         });
       axios
         .get(
-          `https://dblp.org/search/publ/api?q=${data3}` + "&format=json&h=100"
+          `https://dblp.org/search/publ/api?q=${data3.toLowerCase()}` +
+            `&format=json&h=${topIndex[data3.toLowerCase()]}`
         )
         .then((response) => {
           if (response.data.result.hits.hit != null) {
@@ -108,7 +115,8 @@ const SearchDBLP = () => {
       const data4 = terms[3];
       axios
         .get(
-          `https://dblp.org/search/publ/api?q=${data1}` + "&format=json&h=100"
+          `https://dblp.org/search/publ/api?q=${data1.toLowerCase()}` +
+            `&format=json&h=${topIndex[data1.toLowerCase()]}`
         )
         .then((response) => {
           if (response.data.result.hits.hit != null) {
@@ -119,7 +127,8 @@ const SearchDBLP = () => {
         });
       axios
         .get(
-          `https://dblp.org/search/publ/api?q=${data2}` + "&format=json&h=100"
+          `https://dblp.org/search/publ/api?q=${data2.toLowerCase()}` +
+            `&format=json&h=${topIndex[data2.toLowerCase()]}`
         )
         .then((response) => {
           if (response.data.result.hits.hit != null) {
@@ -129,7 +138,10 @@ const SearchDBLP = () => {
           }
         });
       axios
-        .get(`https://dblp.org/search/publ/api?q=${data3}` + "&format=json")
+        .get(
+          `https://dblp.org/search/publ/api?q=${data3.toLowerCase()}` +
+            `&format=json&h=${topIndex[data3.toLowerCase()]}`
+        )
         .then((response) => {
           if (response.data.result.hits.hit != null) {
             setData31(response.data.result.hits.hit);
@@ -139,7 +151,8 @@ const SearchDBLP = () => {
         });
       axios
         .get(
-          `https://dblp.org/search/publ/api?q=${data4}` + "&format=json&h=100"
+          `https://dblp.org/search/publ/api?q=${data4.toLowerCase()}` +
+            `&format=json&h=${topIndex[data4.toLowerCase()]}`
         )
         .then((response) => {
           if (response.data.result.hits.hit != null) {
